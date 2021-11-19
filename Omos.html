@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/xkm0dbv.css">
+    <link rel="stylesheet" href="style.css">
+    <title>krydsfelt</title>
+</head>
+<body>
+  <header>
+      <img src="billedet/krydsfelt_.jpg" alt="logo" class="logo">
+    <nav>
+     <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+          <div>
+            <div>
+              <ul>
+                <li><a href="index.html" class="skrift">Hjem</a></li>
+                <li><a href="Event.html" class="skrift" >Event</a></li>
+                <li><a href="Aktion.html" class="skrift" >Auktion</a></li>
+                <li><a href="Omos.html" class="skrift" >Om os</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="containe">
+    <div class="omkrydsfelt">
+      <h1 class="h1">Krydsfelt - Et unikt samarbejde og fællesskab</h1>
+      <br>
+      <p class="tekst">Krydsfelt Røde Kors Butik på Nørre Allé 30 åbnede 1. juni 2018 og er en fashionable genbrugsbutik beliggende i hjertet af Aarhus med velsorteret genbrugstøj, -accessories og -sko, der er udvalgt med omhu og øje for tidens trend til den unge, modebevidste målgruppe og miljøbevidste forbruger.
+      <br>
+      Krydsfelt er en del af Røde Kors butikkerne, men er et nyere butikskoncept i Røde Kors Genbrug, da denne genbrugsbutik er etableret gennem et unikt samarbejde mellem Røde Kors Aarhus og Ungdommens Røde Kors Aarhus. Som kunde vil man derfor ofte blive mødt af unge frivillige og en ung, energisk og unik vibe.
+      <br>
+      <br>
+      Krydsfelts overskud går til lokale aktiviteter i Ungdommens Røde Kors og Røde Kors i Aarhus samt nationale og internationale aktiviteter i Røde Kors, som hver dag er med til at gøre en forskel for udsatte og sårbare børn, unge og voksne.
+      Dit bidrag til butikken gør en forskel - både gennem dine køb og dine donationer. Af hjertet TAK!</p>
+    </div>
+    <div class="mapouter">
+      <div class="gmap_canvas ramme"><iframe width="600" height="500" id="gmap_canvas" 
+        src="https://maps.google.com/maps?q=n%C3%B8rrealle%2030%208000%20Aarhus%20c&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+        ></iframe>
+      </div>
+    </div>
+  </section>
+  <!-- Her ville jeg have lavet de 2 billeder som links, links skulle gå til RK og URKs aktvivtetssider-->
+  <Section class="kontaktformular">
+
+    <div id="form">
+      <h3 class="h3">Kontakt os</h3>
+      <p class="p2">Har du spørgsmål, ideer, kommentarer eller har du mod på at blive en del af vores vidunderlige frivillige team, så tøv endelig ikke med at skrive til os.</p>
+
+    <form id="form-id" class="form-class" method="post" action="contact-form-process.php">
+
+      <div class="form-group">
+        <label for="Name" class="label">Dit navn</label>
+        <div class="input-group">
+          <input type="text" id="Name" name="Name" class="form-control" required>
+        </div>
+      </div>
+
+    <div class="form-group">
+        <label for="Email" class="label">Din email</label>
+        <div class="input-group">
+          <input type="email" id="Email" name="Email" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Message" class="label">Hvad har du på hjertet</label>
+        <div class="input-group">
+          <textarea id="Message" name="Message" class="form-control" rows="6" maxlength="3000" required></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="button" class="btn btn-primary btn-lg btn-block">Send Besked</button>
+    </div>
+
+    <div class="credit" id="credit">
+      </div>
+      </form>
+    </div>
+  </Section>
+</body>
+</html>

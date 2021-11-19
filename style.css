@@ -1,0 +1,403 @@
+/* MENU*/
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+  
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Hamburger linjer */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  /* Hamburger linjer - top og bttom */
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+  
+  /* flytter linjen ned  */
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+  
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+  
+  /* gør lijen til X */
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+  /* Roter når man klikker */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+  
+  /* viser Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition:  opacity 0.4s ease 0.4s;
+  }
+  
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-wrap .menu > div {
+    background-color: white;
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+  
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #2d233e; 
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: #2d233e; ;
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+  /*menu slut*/
+
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+.iframe-container{
+  width: 560px;
+  display: block;
+  margin: 0 auto;
+}
+
+.img-size {
+  margin:0px auto;
+  display:block;
+  align-items: center;
+  height: 300px;
+  width: 250px;
+}
+
+.ramme {
+  border:5px solid #fdf0f1;
+}
+
+.bud{
+border:5px solid #ebff22;
+width: 100px;
+align-items: center;
+display: block;
+margin: 0px auto;
+}
+
+.skrift {
+  font-family: "JeanLuc", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color:#2d233e;
+  text-align: center;
+}
+
+
+.brødtekst {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+  color:#2d233e;
+}
+
+
+/* events */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* om os */
+
+.containe {
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.omkrydsfelt {
+  background-color: #fdf0f1;
+  color: #2d233e;
+  font-family: "proxima-nova", sans-serif;
+  font-style: normal;
+}
+
+.h1 {
+  color: #2d233e;
+  font-family: "JeanLuc", sans-serif;
+  margin-left: 3%;
+  margin-top: 10%;
+}
+
+.tekst {
+  text-align: justify;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+
+
+/* HVAD DIT BIDRAG GÅR TIL 
+_________________________________________*/
+
+/* KONTAKTFORMULAR
+__________________________________________*/
+#form {
+  display:block;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.body {
+  margin: 0;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #2d233e;
+  text-align: left;
+  background-color: #fff;
+  padding: 30px;
+  padding-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  max-width: 100%;
+}
+
+.h3 {
+  color: #2d233e;
+  font-family: "JeanLuc", sans-serif;
+}
+
+.p2 {
+  font-family: "proxima-nova", sans-serif;
+  color: #2d233e;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  font-family: "proxima-nova", sans-serif;
+  color: #2d233e;
+}
+
+.input-group {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fdf0f1;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  outline: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border: 1px solid #313131;
+}
+
+select.form-control[size], select.form-control[multiple] {
+  height: auto;
+}
+
+textarea.form-control {
+  font-family: "proxima-nova", sans-serif;
+  height: auto;
+}
+
+label.label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.credit {
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #545b62;
+}
+
+.credit a {
+  color: #545b62;
+  text-decoration: underline;
+}
+
+.credit a:hover {
+  color: #2d233e;
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+      transition: none;
+  }
+}
+
+.btn:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #2d233e;
+  border-color: #2d233e;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #2d233e;
+  border-color: #2d233e;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: #2d233e;
+  border-color: #2d233e;
+}
+
+.btn-lg, .btn-group-lg>.-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  font-family: "proxima-nova", sans-serif;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-block+.btn-block {
+  margin-top: 0.5rem;
+}
+
+input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
+  width: 100%;
+}
